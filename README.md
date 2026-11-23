@@ -13,6 +13,6 @@ Add these under **Settings > Secrets and variables > Actions**:
 - `EC2_SSH_KEY`: Full `.pem` private key contents
 
 ## AWS Setup Checklist
-1. Create a private Amazon ECR repository named `zero-code-cicd` (update `AWS_REGION` in `.github/workflows/deploy.yml` if not using `ap-south-1`).
+1. Create a private Amazon ECR repository named `zero-code-cicd` in `us-east-1` (or update `AWS_REGION` in `.github/workflows/deploy.yml` to match your repository's region).
 2. Attach an IAM role with `AmazonEC2ContainerRegistryReadOnly` to your Ubuntu EC2 instance.
 3. Ensure Docker, Docker Compose v2, and AWS CLI v2 are installed on your EC2 instance, and port `80` (HTTP) is open in its Security Group.

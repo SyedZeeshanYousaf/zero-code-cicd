@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
+    container_name: zero-code-cicd
+    ports:
+      - "80:80"
+    restart: unless-stopped
